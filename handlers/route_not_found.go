@@ -4,7 +4,6 @@ import (
 	"Project2/contracts"
 	"fmt"
 	"net/http"
-	//"github.com/somnath-b/go-sample/contracts"
 )
 
 // RouteNotFoundHandler - All requests are redirected to this router when a request is received for an unsupported path
