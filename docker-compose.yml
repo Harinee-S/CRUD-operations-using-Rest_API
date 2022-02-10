@@ -1,0 +1,22 @@
+version: '3.0'
+
+services:
+  postgres:
+    image: postgres:11
+    container_name: gs_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 0712
+    logging:
+      driver: none
+    ports:
+      - '5432:5432'
+    volumes:
+      - ~/Docker/postgres/data:/var/lib/postgresql/data
+    networks:
+      - go-sample
+
+networks:
+  go-sample:
+    driver: bridge
